@@ -4,6 +4,15 @@
   It requires rplidar.launch.
  -->
 <launch>
+
+  <machine 
+    name="ubuntu"
+    address="10.104.202.70"
+    env-loader="/opt/ros/noetic/env_remote1.sh"
+    default="true"
+    user="ubuntu"
+  />
+
   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />

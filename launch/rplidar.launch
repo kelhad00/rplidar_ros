@@ -1,4 +1,12 @@
 <launch>
+  <machine
+    name="ubuntu"
+    address="10.104.202.70"
+    env-loader="/opt/ros/noetic/env_remote1.sh"
+    default="true"
+    user="ubuntu"
+  />
+
   <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
   <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
   <param name="serial_baudrate"     type="int"    value="115200"/><!--A1/A2 -->
